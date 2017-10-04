@@ -22,6 +22,10 @@
 	define('FACTORY_CLEARFY_000_DIR', dirname(__FILE__));
 	define('FACTORY_CLEARFY_000_URL', plugins_url(null, __FILE__));
 
+	load_plugin_textdomain('factory_clearfy_000', false, dirname(plugin_basename(__FILE__)) . '/langs');
+
+	require(FACTORY_CLEARFY_000_DIR . '/includes/functions.php');
+
 	if( defined('FACTORY_PAGES_000_LOADED') ) {
 		require(FACTORY_CLEARFY_000_DIR . '/pages/more-features.php');
 	}
