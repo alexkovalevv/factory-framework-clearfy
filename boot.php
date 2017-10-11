@@ -9,11 +9,6 @@
 	 * @since 1.0.0
 	 */
 
-	// module provides function only for the admin area
-	if( !is_admin() ) {
-		return;
-	}
-
 	if( defined('FACTORY_CLEARFY_000_LOADED') ) {
 		return;
 	}
@@ -25,6 +20,12 @@
 	load_plugin_textdomain('factory_clearfy_000', false, dirname(plugin_basename(__FILE__)) . '/langs');
 
 	require(FACTORY_CLEARFY_000_DIR . '/includes/functions.php');
+	require(FACTORY_CLEARFY_000_DIR . '/includes/class.configurate.php');
+
+	// module provides function only for the admin area
+	if( !is_admin() ) {
+		return;
+	}
 
 	if( defined('FACTORY_PAGES_000_LOADED') ) {
 		require(FACTORY_CLEARFY_000_DIR . '/pages/more-features.php');
