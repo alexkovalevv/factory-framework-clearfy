@@ -18,7 +18,7 @@
 		 */
 		public $id = "more_features";
 
-		public $dashicon = 'dashicons-star-filled wbcr-factory-premium-color';
+		public $page_menu_dashicon = 'dashicons-star-filled wbcr-factory-premium-color';
 
 		public $type = 'page';
 
