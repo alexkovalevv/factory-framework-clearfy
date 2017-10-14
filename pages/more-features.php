@@ -20,6 +20,8 @@
 
 		public $page_menu_dashicon = 'dashicons-star-filled wbcr-factory-premium-color';
 
+		public $page_menu_position = 5;
+
 		public $type = 'page';
 
 		public function __construct(Factory000_Plugin $plugin)
