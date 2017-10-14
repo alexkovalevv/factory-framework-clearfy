@@ -66,3 +66,4 @@
 	{
 		return htmlspecialchars(json_encode($data), ENT_QUOTES, 'UTF-8');
 	}
+
