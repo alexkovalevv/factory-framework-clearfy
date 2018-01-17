@@ -42,7 +42,7 @@
 			<div class="row">
 				<div class="col-sm-4">
 					<div class="wbcr-factory-feature-box">
-						<i class="fa fa-check-circle" aria-hidden="true"></i>
+						<span class="dashicons dashicons-yes"></span>
 
 						<h3><?php _e('Code cleaning', 'factory_clearfy_000')?></h3>
 
@@ -51,7 +51,7 @@
 				</div>
 				<div class="col-sm-4">
 					<div class="wbcr-factory-feature-box">
-						<i class="fa fa-line-chart" aria-hidden="true"></i>
+						<span class="dashicons dashicons-chart-bar"></span>
 
 						<h3><?php _e('Improve SEO', 'factory_clearfy_000')?></h3>
 
@@ -60,7 +60,7 @@
 				</div>
 				<div class="col-sm-4">
 					<div class="wbcr-factory-feature-box">
-						<i class="fa fa-shield" aria-hidden="true"></i>
+						<span class="dashicons dashicons-shield-alt"></span>
 
 						<h3><?php _e('Site ptotection', 'factory_clearfy_000')?></h3>
 
@@ -69,7 +69,7 @@
 				</div>
 				<div class="col-sm-4">
 					<div class="wbcr-factory-feature-box">
-						<i class="fa fa-comments" aria-hidden="true"></i>
+						<span class="dashicons dashicons-welcome-comments"></span>
 
 						<h3><?php _e('Disable comments', 'factory_clearfy_000')?></h3>
 
@@ -78,7 +78,7 @@
 				</div>
 				<div class="col-sm-4">
 					<div class="wbcr-factory-feature-box">
-						<i class="fa fa-cloud-upload" aria-hidden="true"></i>
+						<span class="dashicons dashicons-update"></span>
 
 						<h3><?php _e('Manage updates', 'factory_clearfy_000')?></h3>
 
@@ -88,7 +88,7 @@
 				</div>
 				<div class="col-sm-4">
 					<div class="wbcr-factory-feature-box">
-						<i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+						<span class="dashicons dashicons-admin-plugins"></span>
 
 						<h3><?php _e('Manage widgets', 'factory_clearfy_000')?></h3>
 
@@ -97,7 +97,7 @@
 				</div>
 				<div class="col-sm-4">
 					<div class="wbcr-factory-feature-box">
-						<i class="fa fa-fighter-jet" aria-hidden="true"></i>
+						<span class="dashicons dashicons-dashboard"></span>
 
 						<h3><?php _e('Speed Optimization', 'factory_clearfy_000')?></h3>
 
@@ -106,7 +106,7 @@
 				</div>
 				<div class="col-sm-4">
 					<div class="wbcr-factory-feature-box">
-						<i class="fa fa-eye-slash" aria-hidden="true"></i>
+						<span class="dashicons dashicons-visibility"></span>
 
 						<h3><?php _e('Site privacy', 'factory_clearfy_000')?></h3>
 
@@ -116,7 +116,7 @@
 				</div>
 				<div class="col-sm-4">
 					<div class="wbcr-factory-feature-box">
-						<i class="fa fa-cogs" aria-hidden="true"></i>
+						<span class="dashicons dashicons-admin-settings"></span>
 
 						<h3><?php _e('Easy setup', 'factory_clearfy_000')?></h3>
 
