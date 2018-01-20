@@ -1,5 +1,5 @@
 <?php
-	
+
 	/**
 	 * Core plugin
 	 * @author Webcraftic <wordpress.webraftic@gmail.com>
@@ -7,7 +7,7 @@
 	 * @version 1.0
 	 */
 	abstract class WbcrFactoryClearfy_Configurate {
-		
+
 		public function __construct(Factory000_Plugin $plugin)
 		{
 			$this->plugin = $plugin;
