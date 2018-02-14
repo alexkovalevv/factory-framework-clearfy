@@ -1,9 +1,12 @@
 <?php
 	/**
 	 * Helpers functions
-	 * @author Webcraftic <wordpress.webraftic@gmail.com>
-	 * @copyright (c) 2017 Webraftic Ltd
-	 * @version 1.0
+	 *
+	 * @author Alex Kovalev <alex.kovalevv@gmail.com>
+	 * @copyright (c) 2018, Webcraftic Ltd
+	 *
+	 * @package clearfy
+	 * @since 1.0.0
 	 */
 
 	/**
