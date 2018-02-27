@@ -19,22 +19,25 @@
 	 *
 	 * @return array
 	 */
-	function wbcr_factory_array_merge_insert(array $arr, array $inserted, $position = 'bottom', $key = null)
-	{
-		if( $position == 'top' ) {
-			return array_merge($inserted, $arr);
-		}
-		$key_position = ($key === null)
-			? false
-			: array_search($key, array_keys($arr));
-		if( $key_position === false OR ($position != 'before' AND $position != 'after') ) {
-			return array_merge($arr, $inserted);
-		}
-		if( $position == 'after' ) {
-			$key_position++;
-		}
 
-		return array_merge(array_slice($arr, 0, $key_position, true), $inserted, array_slice($arr, $key_position, null, true));
+	if( !function_exists('wbcr_factory_clearfy_000_array_merge_insert') ) {
+		function wbcr_factory_clearfy_000_array_merge_insert(array $arr, array $inserted, $position = 'bottom', $key = null)
+		{
+			if( $position == 'top' ) {
+				return array_merge($inserted, $arr);
+			}
+			$key_position = ($key === null)
+				? false
+				: array_search($key, array_keys($arr));
+			if( $key_position === false OR ($position != 'before' AND $position != 'after') ) {
+				return array_merge($arr, $inserted);
+			}
+			if( $position == 'after' ) {
+				$key_position++;
+			}
+
+			return array_merge(array_slice($arr, 0, $key_position, true), $inserted, array_slice($arr, $key_position, null, true));
+		}
 	}
 
 	/**
@@ -46,17 +49,20 @@
 	 *
 	 * @return array
 	 */
-	function wbcr_factory_maybe_get_post_json($name)
-	{
-		if( isset($_POST[$name]) AND is_string($_POST[$name]) ) {
-			$result = json_decode(stripslashes($_POST[$name]), true);
-			if( !is_array($result) ) {
-				$result = array();
-			}
 
-			return $result;
-		} else {
-			return array();
+	if( !function_exists('wbcr_factory_clearfy_000_maybe_get_post_json') ) {
+		function wbcr_factory_clearfy_000_maybe_get_post_json($name)
+		{
+			if( isset($_POST[$name]) AND is_string($_POST[$name]) ) {
+				$result = json_decode(stripslashes($_POST[$name]), true);
+				if( !is_array($result) ) {
+					$result = array();
+				}
+
+				return $result;
+			} else {
+				return array();
+			}
 		}
 	}
 
@@ -65,8 +71,10 @@
 	 * @param  array $data
 	 * @return string escaped json string
 	 */
-	function wbcr_factory_get_escape_json(array $data)
-	{
-		return htmlspecialchars(json_encode($data), ENT_QUOTES, 'UTF-8');
+	if( !function_exists('wbcr_factory_clearfy_000_get_escape_json') ) {
+		function wbcr_factory_clearfy_000_get_escape_json(array $data)
+		{
+			return htmlspecialchars(json_encode($data), ENT_QUOTES, 'UTF-8');
+		}
 	}
 
