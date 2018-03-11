@@ -18,6 +18,9 @@
 
 		abstract class Wbcr_FactoryClearfy000_Configurate {
 
+			/**
+			 * @param Wbcr_Factory000_Plugin $plugin
+			 */
 			public function __construct(Wbcr_Factory000_Plugin $plugin)
 			{
 				$this->plugin = $plugin;
@@ -49,7 +52,7 @@
 			 */
 			public function updateOption($option_name, $value)
 			{
-				return $this->plugin->updateOption($option_name, $value);
+				$this->plugin->updateOption($option_name, $value);
 			}
 
 			/**
@@ -58,7 +61,7 @@
 			 */
 			public function deleteOption($option_name)
 			{
-				return $this->plugin->deleteOption($option_name);
+				$this->plugin->deleteOption($option_name);
 			}
 		}
 	}

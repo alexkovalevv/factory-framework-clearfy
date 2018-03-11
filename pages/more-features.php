@@ -14,7 +14,7 @@
 		exit;
 	}
 
-	if( !class_exists('Wbcr_Factory000_Plugin') ) {
+	if( !class_exists('Wbcr_FactoryClearfy000_MoreFeaturesPage') ) {
 
 		class Wbcr_FactoryClearfy000_MoreFeaturesPage extends Wbcr_FactoryPages000_ImpressiveThemplate {
 
@@ -28,7 +28,7 @@
 
 			public function __construct(Wbcr_Factory000_Plugin $plugin)
 			{
-				$this->menuTitle = __('More features (<b>free</b>)', 'factory_clearfy_000');
+				$this->menu_title = __('More features (<b>free</b>)', 'factory_clearfy_000');
 
 				parent::__construct($plugin);
 			}
