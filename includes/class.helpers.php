@@ -19,6 +19,23 @@
 		class WbcrFactoryClearfy000_Helpers {
 
 			/**
+			 * Is permalink enabled?
+			 * @global WP_Rewrite $wp_rewrite
+			 * @since 1.0.0
+			 * @return bool
+			 */
+			public static function isPermalink()
+			{
+				global $wp_rewrite;
+
+				if( !isset($wp_rewrite) || !is_object($wp_rewrite) || !$wp_rewrite->using_permalinks() ) {
+					return false;
+				}
+
+				return true;
+			}
+
+			/**
 			 * Display 404 page to bump bots and bad guys
 			 *
 			 * @param bool $simple If true force displaying basic 404 page
