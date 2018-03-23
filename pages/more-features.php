@@ -64,7 +64,7 @@
 						<div class="wbcr-factory-feature-box">
 							<span class="dashicons dashicons-shield-alt"></span>
 
-							<h3><?php _e('Site ptotection', 'wbcr_factory_clearfy_000')?></h3>
+							<h3><?php _e('Site protection', 'wbcr_factory_clearfy_000')?></h3>
 
 							<p><?php _e('Enables and disables features that improve the protection of your site.', 'wbcr_factory_clearfy_000')?></p>
 						</div>
