@@ -31,6 +31,8 @@
 				$this->menu_title = __('More features (<b>free</b>)', 'wbcr_factory_clearfy_000');
 
 				parent::__construct($plugin);
+
+				$this->plugin = $plugin;
 			}
 
 			public function getPageTitle()
@@ -128,7 +130,15 @@
 				</div>
 
 				<div class="wbcr-factory-buttons-wrap">
-					<a href="https://goo.gl/TcMcS4" class="wbcr-factory-premium-button" target="_blank">
+					<?php
+						$url = 'https://clearfy.pro';
+
+						if( get_locale() == 'ru_RU' ) {
+							$url = 'https://ru.clearfy.pro';
+						}
+						$url .= '?utm_source=wordpress.org&utm_campaign=' . $this->plugin->getPluginName();
+					?>
+					<a href="<?= $url ?>" class="wbcr-factory-premium-button" target="_blank">
 						<?php _e('Get the ultimate plugin 100% FREE', 'wbcr_factory_clearfy_000')?>
 					</a>
 				</div>
