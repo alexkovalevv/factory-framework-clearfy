@@ -20,7 +20,7 @@
 
 			public $id = "more_features";
 
-			public $page_menu_dashicon = 'dashicons-star-filled wbcr-factory-premium-color';
+			public $page_menu_dashicon = 'dashicons-star-filled wbcr-factory-orange-color';
 
 			public $page_menu_position = 5;
 
