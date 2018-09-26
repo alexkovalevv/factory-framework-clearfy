@@ -176,5 +176,28 @@
 			{
 				return htmlspecialchars(json_encode($data), ENT_QUOTES, 'UTF-8');
 			}
+
+			/**
+			 * Replace url for multisite
+			 *
+			 * @param $string
+			 *
+			 * @return string
+			 */
+			public static function replaceMsUrl( $string )
+			{
+				if (
+					is_multisite()
+					&& BLOG_ID_CURRENT_SITE != get_current_blog_id()
+				) {
+					return str_replace(
+						get_site_url( BLOG_ID_CURRENT_SITE ),
+						get_site_url( get_current_blog_id() ),
+						$string
+					);
+				}
+
+				return $string;
+			}
 		}
 	}
