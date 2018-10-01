@@ -159,7 +159,7 @@
 			 */
 			public function isPluginActiveAsComponent()
 			{
-				return self::isClearfyActivate() && $this->plugin_as_component;
+				return self::isClearfyActivate() && !$this->plugin_as_component;
 			}
 
 			/**
@@ -206,7 +206,7 @@
 					return false;
 				}
 
-				if( $this->required_clearfy_check_component && !$this->isPluginActiveAsComponent() ) {
+				if( $this->required_clearfy_check_component && $this->isPluginActiveAsComponent() ) {
 					return false;
 				}
 
@@ -283,7 +283,7 @@
 					$notice_text = '- ' . sprintf(__('This plugin is already activated, you are trying to activate it again.', 'wbcr_factory_clearfy_000'), $this->required_php_version) . '<br>';
 				}
 
-				if( $this->required_clearfy_check_component && !$this->isPluginActiveAsComponent() ) {
+				if( $this->required_clearfy_check_component && $this->isPluginActiveAsComponent() ) {
 					$has_one = true;
 					$notice_text = '- ' . sprintf(__('Clearfy has the features of the %s plugin. Please, deactivate %s to avoid conflicts of plugins!', 'wbcr_factory_clearfy_000'), $this->plugin_title, $this->plugin_title) . '<br>';
 				}
