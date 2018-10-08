@@ -19,6 +19,28 @@
 		class WbcrFactoryClearfy000_Helpers {
 
 			/**
+			 * Recursive sanitation for an array
+			 *
+			 * @param $array
+			 * @since 2.0.5
+			 * @return mixed
+			 */
+			public static function recursiveSanitizeArray($array, $function)
+			{
+				foreach($array as $key => &$value) {
+					if( is_array($value) ) {
+						$value = self::recursiveSanitizeArray($value, $function);
+					} else {
+						if( function_exists($function) ) {
+							$value = $function($value);
+						}
+					}
+				}
+
+				return $array;
+			}
+
+			/**
 			 * Is permalink enabled?
 			 * @global WP_Rewrite $wp_rewrite
 			 * @since 1.0.0

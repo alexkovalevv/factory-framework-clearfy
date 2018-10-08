@@ -26,6 +26,7 @@
 
 	require(FACTORY_CLEARFY_000_DIR . '/includes/class.helpers.php');
 	require(FACTORY_CLEARFY_000_DIR . '/includes/class.configurate.php');
+	require(FACTORY_CLEARFY_000_DIR . '/pages/class.pages.php');
 
 	// module provides function only for the admin area
 	if( !is_admin() ) {

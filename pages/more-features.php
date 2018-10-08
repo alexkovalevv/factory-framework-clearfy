@@ -14,7 +14,7 @@
 		exit;
 	}
 
-	if( !class_exists('Wbcr_FactoryClearfy000_MoreFeaturesPage') ) {
+	if( !class_exists('Wbcr_FactoryClearfy000_MoreFeaturesPage') && class_exists('Wbcr_FactoryPages000_ImpressiveThemplate') ) {
 
 		class Wbcr_FactoryClearfy000_MoreFeaturesPage extends Wbcr_FactoryPages000_ImpressiveThemplate {
 
