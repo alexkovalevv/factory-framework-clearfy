@@ -204,16 +204,18 @@
 				if( is_multisite() && $this->plugin->isNetworkActive() ) {
 
 					$license_page_url = $this->getBaseUrl('license');
+					$upgrade_url = WbcrFactoryClearfy000_Helpers::getWebcrafticSitePageUrl($this->plugin->getPluginName(), 'pricing', 'multisite_save_settings');
+					$upgrade_price = WbcrFactoryClearfy000_Helpers::getClearfyBusinessPrice();
 
 					$html = '<div class="wbcr-factory-clearfy-000-multisite-suggetion">';
 					$html .= '<div class="wbcr-factory-inner-contanier">';
-					$html .= '<h3>Перейти на Clearfy Бизнес</h3>';
-					$html .= '<p>Упс... Мы приносим свои извинения за неудобства!</p>';
-					$html .= '<p>Полная поддержка мультисайтов доступна только в пакете Clearfy Бизнес и Clearfy Бизнес Революция!</p>';
-					$html .= '<p>Вы можете активировать плагин отдельно для каждого сайта и использовать его без ограничений, но в режиме суперадминистратора, вы не можете сохранять настройки плагина!</p>';
+					$html .= '<h3>' . __('Upgrade to Clearfy Business', 'wbcr_factory_clearfy_000') . '</h3>';
+					$html .= '<p>' . __('Oops... Sorry for the inconvenience caused!', 'wbcr_factory_clearfy_000') . '</p>';
+					$html .= '<p>' . __('Complete multisite support is available in Clearfy Business and Clearfy Business Revolution packages only!', 'wbcr_factory_clearfy_000') . '</p>';
+					$html .= '<p>' . __('You can activate the plugin on each website and use it with zero limitations. But you can’t save the plugin’s settings under the Super Administrator role!', 'wbcr_factory_clearfy_000') . '</p>';
 					$html .= '<p style="margin-top:20px">';
-					$html .= '<a href="' . $license_page_url . '" class="wbcr-factory-activate-premium" rel="noopener">Активировать лицензию</a> ';
-					$html .= '<a href="" class="wbcr-factory-purchase-premium" target="_blank" rel="noopener">Обновить до Clearfy Бизнес за $19</a>';
+					$html .= '<a href="' . $license_page_url . '" class="wbcr-factory-activate-premium" rel="noopener">' . __('Activate license ', 'wbcr_factory_clearfy_000') . '</a> ';
+					$html .= '<a href="' . $upgrade_url . '" class="wbcr-factory-purchase-premium" target="_blank" rel="noopener">' . sprintf(__('Upgrade to Clearfy Business for $%d', 'wbcr_factory_clearfy_000'), $upgrade_price) . '</a>';
 					$html .= '</p>';
 					$html .= '</div>';
 					$html .= '</div>';
@@ -265,19 +267,20 @@
 
 			public function showBusinessSuggetionWidget()
 			{
+				$upgrade_price = WbcrFactoryClearfy000_Helpers::getClearfyBusinessPrice();
 				?>
 				<div class="wbcr-factory-sidebar-widget wbcr-factory-clearfy-000-pro-suggettion">
-					<h3>Лучшее в Clearfy <span>Business</span></h3>
+					<h3><?php _e('MORE IN CLEARFY <span>BUSINESS</span>', 'wbcr_factory_clearfy_000')?></h3>
 					<ul>
-						<li>4 премиум компонента сейчас</li>
-						<li>40 новых премиум компонентов в год по одной цене</li>
-						<li>Поддержка мультисайтов</li>
-						<li>Дополнительные настройки</li>
-						<li>Нет рекламы</li>
-						<li>Лучшая поддержка</li>
+						<li><?php _e('4 premium components now;', 'wbcr_factory_clearfy_000')?></li>
+						<li><?php _e('40 new premium components within a year for the single price;', 'wbcr_factory_clearfy_000')?></li>
+						<li><?php _e('Multisite support;', 'wbcr_factory_clearfy_000')?></li>
+						<li><?php _e('Advanced settings;', 'wbcr_factory_clearfy_000')?></li>
+						<li><?php _e('No ads;', 'wbcr_factory_clearfy_000')?></li>
+						<li><?php _e('Perfect support.', 'wbcr_factory_clearfy_000')?></li>
 					</ul>
-					<a href="" class="wbcr-factory-purchase-premium" target="_blank" rel="noopener">
-						<?php printf(__('Обновить за $%s', 'clearfy'), 19) ?>
+					<a href="<?= WbcrFactoryClearfy000_Helpers::getWebcrafticSitePageUrl($this->plugin->getPluginName(), 'pricing', 'right_sidebar_ads') ?>" class="wbcr-factory-purchase-premium" target="_blank" rel="noopener">
+						<?php printf(__('Upgrade for $%s', 'clearfy'), $upgrade_price) ?>
 					</a>
 				</div>
 			<?php
