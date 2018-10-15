@@ -124,6 +124,7 @@
 				 * @since 2.0.5
 				 */
 				do_action('wbcr/clearfy/page_assets', $this->getResultId(), $scripts, $styles);
+				//$this->scripts->localize('wbcr-clearfy-global', '');
 			}
 
 			/**
@@ -132,6 +133,17 @@
 			public function request()
 			{
 				return $this->plugin->request;
+			}
+
+			/**
+			 * @since 2.0.5
+			 * @param $option_name
+			 * @param bool $default *
+			 * @return mixed|void
+			 */
+			public function getPopulateOption($option_name, $default = false)
+			{
+				return $this->plugin->getPopulateOption($option_name, $default);
 			}
 
 			/**
@@ -149,9 +161,28 @@
 			 * @param $value
 			 * @return void
 			 */
+			public function updatePopulateOption($option_name, $value)
+			{
+				$this->plugin->updatePopulateOption($option_name, $value);
+			}
+
+			/**
+			 * @param $option_name
+			 * @param $value
+			 * @return void
+			 */
 			public function updateOption($option_name, $value)
 			{
 				$this->plugin->updateOption($option_name, $value);
+			}
+
+			/**
+			 * @param $option_name
+			 * @return void
+			 */
+			public function deletePopulateOption($option_name)
+			{
+				$this->plugin->deletePopulateOption($option_name);
 			}
 
 			/**
@@ -162,6 +193,7 @@
 			{
 				$this->plugin->deleteOption($option_name);
 			}
+
 
 			/**
 			 * Действие выполняется для всех страниц Clearfy и его компонентах.

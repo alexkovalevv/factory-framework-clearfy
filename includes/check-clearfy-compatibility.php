@@ -62,7 +62,7 @@
 			 *
 			 * @var bool по умолчанию false
 			 */
-			protected $required_clearfy_check_component = true;
+			protected $required_clearfy_check_component = false;
 
 			/**
 			 * Нужно ли проверять совместимость фреймворка для работы с плагином Clearfy
@@ -137,6 +137,17 @@
 				$plugin_data = get_plugin_data(self::getClearfyPluginFile());
 
 				return !empty($plugin_data['Version']) ? $plugin_data['Version'] : null;
+			}
+
+			public function registerNotices()
+			{
+				if( current_user_can('activate_plugins') && current_user_can('edit_plugins') && current_user_can('install_plugins') ) {
+					if( is_plugin_active_for_network(self::getClearfyBasePath()) ) {
+						add_action('network_admin_notices', array($this, 'showNotice'));
+					} else {
+						add_action('admin_notices', array($this, 'showNotice'));
+					}
+				}
 			}
 
 

@@ -40,6 +40,18 @@
 			 * @param bool $default
 			 * @return mixed|void
 			 */
+			public function getPopulateOption($option_name, $default = false)
+			{
+				return $this->plugin->getPopulateOption($option_name, $default);
+			}
+
+			/**
+			 * Get options with namespace
+			 *
+			 * @param $option_name
+			 * @param bool $default
+			 * @return mixed|void
+			 */
 			public function getOption($option_name, $default = false)
 			{
 				return $this->plugin->getOption($option_name, $default);
@@ -50,9 +62,28 @@
 			 * @param $value
 			 * @return bool
 			 */
+			public function updatePopulateOption($option_name, $value)
+			{
+				$this->plugin->updatePopulateOption($option_name, $value);
+			}
+
+			/**
+			 * @param $option_name
+			 * @param $value
+			 * @return bool
+			 */
 			public function updateOption($option_name, $value)
 			{
 				$this->plugin->updateOption($option_name, $value);
+			}
+
+			/**
+			 * @param $option_name
+			 * @return bool
+			 */
+			public function deletePopulateOption($option_name)
+			{
+				$this->plugin->deletePopulateOption($option_name);
 			}
 
 			/**
