@@ -58,6 +58,18 @@
 			}
 
 			/**
+			 * Get network options with namespace
+			 *
+			 * @param $option_name
+			 * @param bool $default
+			 * @return mixed|void
+			 */
+			public function getNetworkOption($option_name, $default = false)
+			{
+				return $this->plugin->getNetworkOption($option_name, $default);
+			}
+
+			/**
 			 * @param $option_name
 			 * @param $value
 			 * @return bool
@@ -65,6 +77,16 @@
 			public function updatePopulateOption($option_name, $value)
 			{
 				$this->plugin->updatePopulateOption($option_name, $value);
+			}
+
+			/**
+			 * @param $option_name
+			 * @param $value
+			 * @return bool
+			 */
+			public function updateNetworkOption($option_name, $value)
+			{
+				$this->plugin->updateNetworkOption($option_name, $value);
 			}
 
 			/**
