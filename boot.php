@@ -17,7 +17,10 @@
 	if( defined('FACTORY_CLEARFY_000_LOADED') ) {
 		return;
 	}
+
 	define('FACTORY_CLEARFY_000_LOADED', true);
+
+	define('FACTORY_CLEARFY_000', '2.0.5');
 
 	define('FACTORY_CLEARFY_000_DIR', dirname(__FILE__));
 	define('FACTORY_CLEARFY_000_URL', plugins_url(null, __FILE__));
@@ -29,10 +32,16 @@
 	require(FACTORY_CLEARFY_000_DIR . '/pages/class.pages.php');
 
 	// module provides function only for the admin area
-	if( !is_admin() ) {
-		return;
-	}
+	if( is_admin() ) {
+		/**
+		 * Подключаем скрипты для установки компонентов Clearfy
+		 * на все страницы админпанели
+		 */
+		add_action('admin_enqueue_scripts', function () {
+			wp_enqueue_script('wbcr-clearfy-global', FACTORY_CLEARFY_000_URL . '/assets/js/globals.js', array('jquery'), FACTORY_CLEARFY_000);
+		});
 
-	if( defined('FACTORY_PAGES_000_LOADED') ) {
-		require(FACTORY_CLEARFY_000_DIR . '/pages/more-features.php');
+		if( defined('FACTORY_PAGES_000_LOADED') ) {
+			require(FACTORY_CLEARFY_000_DIR . '/pages/more-features.php');
+		}
 	}

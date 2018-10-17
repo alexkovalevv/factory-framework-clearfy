@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: clearfy\n"
-"POT-Creation-Date: 2018-09-29 14:41+0300\n"
-"PO-Revision-Date: 2018-09-29 14:41+0300\n"
+"POT-Creation-Date: 2018-10-16 22:37+0300\n"
+"PO-Revision-Date: 2018-10-16 22:41+0300\n"
 "Last-Translator: alex.kovalevv@gmail.com <alex.kovalevv@gmail.com>\n"
 "Language-Team: Alex Kovalev <alex.kovalevv@gmail.com>\n"
 "Language: ru_RU\n"
@@ -17,52 +17,52 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: includes/check-clearfy-compatibility.php:247
+#: includes/check-clearfy-compatibility.php:265
 msgid "Clearfy warning"
 msgstr "Clearfy предупреждение"
 
-#: includes/check-clearfy-compatibility.php:248
+#: includes/check-clearfy-compatibility.php:266
 #, php-format
 msgid "The %s component"
 msgstr "Работа компонента %s"
 
-#: includes/check-clearfy-compatibility.php:250
+#: includes/check-clearfy-compatibility.php:268
 msgid "warning"
 msgstr "предупреждение"
 
-#: includes/check-clearfy-compatibility.php:251
+#: includes/check-clearfy-compatibility.php:269
 #, php-format
 msgid "The %s plugin"
 msgstr "Работа плагина %s"
 
-#: includes/check-clearfy-compatibility.php:254
+#: includes/check-clearfy-compatibility.php:272
 msgid "has stopped."
 msgstr "была остановлена."
 
-#: includes/check-clearfy-compatibility.php:255
+#: includes/check-clearfy-compatibility.php:273
 msgid "Possible reasons:"
 msgstr "Возможные причины:"
 
-#: includes/check-clearfy-compatibility.php:261
+#: includes/check-clearfy-compatibility.php:279
 #, php-format
 msgid "You need to update the PHP version to %s or higher!"
 msgstr "Вам нужно обновить версию PHP до %s или выше!"
 
-#: includes/check-clearfy-compatibility.php:266
+#: includes/check-clearfy-compatibility.php:284
 #, php-format
 msgid "You need to update WordPress to %s or higher!"
 msgstr "Вам нужно обновить WordPress до %s или выше!"
 
-#: includes/check-clearfy-compatibility.php:271
+#: includes/check-clearfy-compatibility.php:289
 #, php-format
 msgid "You need to update the Clearfy plugin version to %s or higher!"
 msgstr "Вам нужно обновить версию плагина Clearfy до %s или выше!"
 
-#: includes/check-clearfy-compatibility.php:276
+#: includes/check-clearfy-compatibility.php:294
 msgid "This plugin is already activated, you are trying to activate it again."
 msgstr "Этот плагин уже активирован, вы пытаетесь активировать его снова."
 
-#: includes/check-clearfy-compatibility.php:281
+#: includes/check-clearfy-compatibility.php:299
 #, php-format
 msgid ""
 "Clearfy has the features of the %s plugin. Please, deactivate %s to avoid "
@@ -70,6 +70,126 @@ msgid ""
 msgstr ""
 "Плагин Clearfy уже включает в себя функции плагина %s. Пожалуйста, "
 "деактивируйте плагин %s, чтобы не создавать конфликтов!"
+
+#: pages/class.pages.php:212
+msgid "Upgrade to Clearfy Business"
+msgstr "Перейти на Clearfy Бизнес"
+
+#: pages/class.pages.php:213
+msgid "Oops... Sorry for the inconvenience caused!"
+msgstr "Упс... Мы приносим свои извинения за неудобства!"
+
+#: pages/class.pages.php:214
+msgid ""
+"Complete multisite support is available in Clearfy Business and Clearfy "
+"Business Revolution packages only!"
+msgstr ""
+"Полная поддержка мультисайтов доступна только в пакете Clearfy Бизнес и "
+"Clearfy Бизнес Революция!"
+
+#: pages/class.pages.php:215
+msgid ""
+"You can activate the plugin on each website and use it with zero "
+"limitations. But you can’t save the plugin’s settings under the Super "
+"Administrator role!"
+msgstr ""
+"Вы можете активировать плагин отдельно для каждого сайта и использовать его "
+"без ограничений, но в режиме суперадминистратора, вы не можете сохранять "
+"настройки плагина!"
+
+#: pages/class.pages.php:217
+msgid "Activate license "
+msgstr "Активировать лицензию "
+
+#: pages/class.pages.php:218
+#, php-format
+msgid "Upgrade to Clearfy Business for $%d"
+msgstr "Обновить до Clearfy Бизнес за $%d"
+
+#: pages/class.pages.php:273
+msgid "MORE IN CLEARFY <span>BUSINESS</span>"
+msgstr "ЛУЧШЕЕ В CLEARFY <span>БИЗНЕС</span>"
+
+#: pages/class.pages.php:275
+msgid "4 premium components now;"
+msgstr "4 премиум компонента сейчас;"
+
+#: pages/class.pages.php:276
+msgid "40 new premium components within a year for the single price;"
+msgstr "40 новых премиум компонентов в год по одной цене;"
+
+#: pages/class.pages.php:277
+msgid "Multisite support;"
+msgstr "Поддержка мультисайтов;"
+
+#: pages/class.pages.php:278
+msgid "Advanced settings;"
+msgstr "Дополнительные настройки;"
+
+#: pages/class.pages.php:279
+msgid "No ads;"
+msgstr "Нет рекламы;"
+
+#: pages/class.pages.php:280
+msgid "Perfect support."
+msgstr "Лучшая поддержка."
+
+#: pages/class.pages.php:283
+#, php-format
+msgid "Upgrade for $%s"
+msgstr "Обновиться за $%s"
+
+#: pages/class.pages.php:299
+msgid ""
+"A neutral setting that can not harm your site, but you must be sure that you "
+"need to use it."
+msgstr ""
+"Нейтральная настройка, которая не может нанести вред вашему сайту, но вы "
+"должны быть уверены, что вам нужно ее использовать."
+
+#: pages/class.pages.php:305
+msgid ""
+"When set this option, you must be careful. Plugins and themes may depend on "
+"this function. You must be sure that you can disable this feature for the "
+"site."
+msgstr ""
+"При включении этой настройки, вы должны быть осторожны. Некоторые плагины и "
+"темы могут зависеть от этой функции. Вы должны быть уверены, что эту функцию "
+"можно отключить для сайта."
+
+#: pages/class.pages.php:311
+msgid "Absolutely safe setting, We recommend to use."
+msgstr "Абсолютно безопасная настройка, рекомендуем использовать."
+
+#: pages/class.pages.php:316
+msgid "Hover to the icon to get help for the feature you selected."
+msgstr ""
+"Наведите указатель мыши на значок, чтобы получить справку по выбранной "
+"функции."
+
+#: pages/class.pages.php:334
+msgid "Do you want the plugin to improved and update?"
+msgstr "Вы хотите, чтобы плагин улучшался и обновлялся?"
+
+#: pages/class.pages.php:337
+msgid ""
+"Help the author, leave a review on wordpress.org. Thanks to feedback, I will "
+"know that the plugin is really useful to you and is needed."
+msgstr ""
+"Помогите автору, оставьте отзыв на wordpress.org. Благодаря отзывам, я буду "
+"знать, что плагин действительно полезен для вас и необходим."
+
+#: pages/class.pages.php:339
+msgid "And also write your ideas on how to extend or improve the plugin."
+msgstr "А также напишите свои идеи о том, как расширить или улучшить плагин."
+
+#: pages/class.pages.php:344
+msgid "Go rate us and push ideas"
+msgstr "Оставить отзыв или поделиться идеей"
+
+#: pages/class.pages.php:356
+msgid "Donation for plugin development"
+msgstr "Пожертвования на развитие плагина"
 
 #: pages/more-features.php:31
 msgid "More features (<b>free</b>)"
@@ -175,7 +295,7 @@ msgstr ""
 
 #: pages/more-features.php:142
 msgid "Get the ultimate plugin 100% FREE"
-msgstr "Получить полную версию бесплатно на 100%"
+msgstr "Получить полную версию бесплатно на 100%."
 
 #~ msgid "component"
 #~ msgstr "компонент"

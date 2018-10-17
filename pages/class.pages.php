@@ -95,21 +95,10 @@
 				parent::assets($scripts, $styles);
 
 				$this->styles->add(FACTORY_CLEARFY_000_URL . '/assets/css/clearfy-base.css');
-				$this->scripts->add(FACTORY_CLEARFY_000_URL . '/assets/js/globals.js', array(
-					'jquery'
-				), 'wbcr-clearfy-global');
 
 				// todo: вынести все общие скрипты и стили фреймворка, продумать совместимость с другими плагинами
 				if( defined('WCL_PLUGIN_URL') ) {
 					$this->styles->add(WCL_PLUGIN_URL . '/admin/assets/css/general.css');
-
-					// Скрипты отвечают за ajax установку, удалени, обновление, активацию компонентов
-					// и внешних плагинов.
-					$this->styles->add(WCL_PLUGIN_URL . '/admin/assets/css/install-addons.css');
-					$this->scripts->add(WCL_PLUGIN_URL . '/admin/assets/js/install-addons.js', array(
-						'jquery',
-						'wbcr-clearfy-global'
-					));
 				}
 
 				wbcr_factory_000_do_action_deprecated('wbcr_clearfy_page_enqueue_scripts', array(
@@ -124,7 +113,6 @@
 				 * @since 2.0.5
 				 */
 				do_action('wbcr/clearfy/page_assets', $this->getResultId(), $scripts, $styles);
-				//$this->scripts->localize('wbcr-clearfy-global', '');
 			}
 
 			/**
@@ -280,7 +268,7 @@
 						<li><?php _e('Perfect support.', 'wbcr_factory_clearfy_000')?></li>
 					</ul>
 					<a href="<?= WbcrFactoryClearfy000_Helpers::getWebcrafticSitePageUrl($this->plugin->getPluginName(), 'pricing', 'right_sidebar_ads') ?>" class="wbcr-factory-purchase-premium" target="_blank" rel="noopener">
-						<?php printf(__('Upgrade for $%s', 'clearfy'), $upgrade_price) ?>
+						<?php printf(__('Upgrade for $%s', 'wbcr_factory_clearfy_000'), $upgrade_price) ?>
 					</a>
 				</div>
 			<?php
@@ -296,24 +284,24 @@
 						<span class="wbcr-factory-hint-icon-simple wbcr-factory-simple-red">
 							<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAQAAABKmM6bAAAAUUlEQVQIHU3BsQ1AQABA0X/komIrnQHYwyhqQ1hBo9KZRKL9CBfeAwy2ri42JA4mPQ9rJ6OVt0BisFM3Po7qbEliru7m/FkY+TN64ZVxEzh4ndrMN7+Z+jXCAAAAAElFTkSuQmCC" alt=""/>
 						</span>
-							- <?php _e('A neutral setting that can not harm your site, but you must be sure that you need to use it.', 'wbcr_factory_pages_000'); ?>
+							- <?php _e('A neutral setting that can not harm your site, but you must be sure that you need to use it.', 'wbcr_factory_clearfy_000'); ?>
 						</li>
 						<li>
 						<span class="wbcr-factory-hint-icon-simple wbcr-factory-simple-grey">
 							<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAQAAABKmM6bAAAAUUlEQVQIHU3BsQ1AQABA0X/komIrnQHYwyhqQ1hBo9KZRKL9CBfeAwy2ri42JA4mPQ9rJ6OVt0BisFM3Po7qbEliru7m/FkY+TN64ZVxEzh4ndrMN7+Z+jXCAAAAAElFTkSuQmCC" alt=""/>
 						</span>
-							- <?php _e('When set this option, you must be careful. Plugins and themes may depend on this function. You must be sure that you can disable this feature for the site.', 'wbcr_factory_pages_000'); ?>
+							- <?php _e('When set this option, you must be careful. Plugins and themes may depend on this function. You must be sure that you can disable this feature for the site.', 'wbcr_factory_clearfy_000'); ?>
 						</li>
 						<li>
 						<span class="wbcr-factory-hint-icon-simple wbcr-factory-simple-green">
 							<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAQAAABKmM6bAAAAUUlEQVQIHU3BsQ1AQABA0X/komIrnQHYwyhqQ1hBo9KZRKL9CBfeAwy2ri42JA4mPQ9rJ6OVt0BisFM3Po7qbEliru7m/FkY+TN64ZVxEzh4ndrMN7+Z+jXCAAAAAElFTkSuQmCC" alt=""/>
 						</span>
-							- <?php _e('Absolutely safe setting, We recommend to use.', 'wbcr_factory_pages_000'); ?>
+							- <?php _e('Absolutely safe setting, We recommend to use.', 'wbcr_factory_clearfy_000'); ?>
 						</li>
 					</ul>
 					----------<br>
 
-					<p><?php _e('Hover to the icon to get help for the feature you selected.', 'wbcr_factory_pages_000'); ?></p>
+					<p><?php _e('Hover to the icon to get help for the feature you selected.', 'wbcr_factory_clearfy_000'); ?></p>
 				</div>
 			<?php
 			}
@@ -331,17 +319,17 @@
 				?>
 				<div class="wbcr-factory-sidebar-widget">
 					<p>
-						<strong><?php _e('Do you want the plugin to improved and update?', 'wbcr_factory_pages_000'); ?></strong>
+						<strong><?php _e('Do you want the plugin to improved and update?', 'wbcr_factory_clearfy_000'); ?></strong>
 					</p>
 
-					<p><?php _e('Help the author, leave a review on wordpress.org. Thanks to feedback, I will know that the plugin is really useful to you and is needed.', 'wbcr_factory_pages_000'); ?></p>
+					<p><?php _e('Help the author, leave a review on wordpress.org. Thanks to feedback, I will know that the plugin is really useful to you and is needed.', 'wbcr_factory_clearfy_000'); ?></p>
 
-					<p><?php _e('And also write your ideas on how to extend or improve the plugin.', 'wbcr_factory_pages_000'); ?></p>
+					<p><?php _e('And also write your ideas on how to extend or improve the plugin.', 'wbcr_factory_clearfy_000'); ?></p>
 
 					<p>
 						<i class="wbcr-factory-icon-5stars"></i>
 						<a href="<?= $page_url ?>" title="Go rate us" target="_blank">
-							<strong><?php _e('Go rate us and push ideas', 'wbcr_factory_pages_000'); ?></strong>
+							<strong><?php _e('Go rate us and push ideas', 'wbcr_factory_clearfy_000'); ?></strong>
 						</a>
 					</p>
 				</div>
@@ -353,7 +341,7 @@
 				?>
 				<div class="wbcr-factory-sidebar-widget">
 					<p>
-						<strong><?php _e('Donation for plugin development', 'wbcr_factory_pages_000'); ?></strong>
+						<strong><?php _e('Donation for plugin development', 'wbcr_factory_clearfy_000'); ?></strong>
 					</p>
 
 					<?php if( get_locale() !== 'ru_RU' ): ?>
