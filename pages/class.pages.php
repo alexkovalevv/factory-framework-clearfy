@@ -230,7 +230,7 @@
 					$widgets['donate_widget'] = $this->getDonateWidget();
 				} else if( $position == 'right' ) {
 					$widgets['businnes_suggetion'] = $this->getBusinessSuggetionWidget();
-					//$widgets['info_widget'] = $this->getInfoWidget();
+					$widgets['info_widget'] = $this->getInfoWidget();
 					$widgets['rating_widget'] = $this->getRatingWidget();
 				}
 
