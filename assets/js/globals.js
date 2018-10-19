@@ -53,16 +53,23 @@
 			noticeInnerWrap.prepend(dashicon);
 			dashicon.after(message);
 
-			$('.wbcr-factory-content').prepend(noticeContanier);
+			$([document.documentElement, document.body]).animate({
+				scrollTop: $('.wbcr-factory-content').offset().top - 100
+			}, 300, function() {
+				noticeContanier.hide();
+				$('.wbcr-factory-content').prepend(noticeContanier);
+				noticeContanier.fadeIn();
 
-			/**
-			 * Хук выполняет проивольную функцию, после того как уведомление отображено
-			 * Реализация системы фильтров и хуков в файле libs/clearfy/admin/assests/js/global.js
-			 * Пример регистрации хука $.wbcr_factory_clearfy_000.hooks.add('wbcr/factory_clearfy_000/updated', function(noticeId) {});
-			 * @param {string} noticeId - id уведомления
-			 */
-			$.wbcr_factory_clearfy_000.hooks.run('wbcr/factory_clearfy_000/showed_notice', [noticeId]);
-			$.wbcr_factory_clearfy_000.hooks.run('wbcr/clearfy/showed_notice', [noticeId]);
+				/**
+				 * Хук выполняет проивольную функцию, после того как уведомление отображено
+				 * Реализация системы фильтров и хуков в файле libs/clearfy/admin/assests/js/global.js
+				 * Пример регистрации хука $.wbcr_factory_clearfy_000.hooks.add('wbcr/factory_clearfy_000/updated',
+				 * function(noticeId) {});
+				 * @param {string} noticeId - id уведомления
+				 */
+				$.wbcr_factory_clearfy_000.hooks.run('wbcr/factory_clearfy_000/showed_notice', [noticeId]);
+				$.wbcr_factory_clearfy_000.hooks.run('wbcr/clearfy/showed_notice', [noticeId]);
+			});
 
 			return noticeId;
 		},
@@ -86,7 +93,8 @@
 				/**
 				 * Хук выполняет проивольную функцию, после того как уведомление скрыто
 				 * Реализация системы фильтров и хуков в файле libs/clearfy/admin/assests/js/global.js
-				 * Пример регистрации хука $.wbcr_factory_clearfy_000.hooks.add('wbcr/factory_clearfy_000/updated', function(noticeId)
+				 * Пример регистрации хука $.wbcr_factory_clearfy_000.hooks.add('wbcr/factory_clearfy_000/updated',
+				 * function(noticeId)
 				 * {});
 				 * @param {string} noticeId - id уведомления
 				 */
