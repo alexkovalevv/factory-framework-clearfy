@@ -2,16 +2,16 @@
 
 	/**
 	 * Класс позволяет получить информацию о плагине Clearfy и его совместимость с другими плагинами.
-	 * Наследует класс Wbcr_Factory000_Compatibility, который отвечает за проверку базовой совместимости сайта.
+	 * Наследует класс Wbcr_Factory_Compatibility, который отвечает за проверку базовой совместимости сайта.
 	 *
 	 * @author Webcraftic <wordpress.webraftic@gmail.com>
 	 * @copyright (c) 26.09.2018, Webcraftic
 	 * @version 1.0.0
 	 * @since 2.0.5
 	 */
-	if( !class_exists('Wbcr_FactoryClearfy000_Compatibility') ) {
+	if( !class_exists('Wbcr_FactoryClearfy_Compatibility') ) {
 
-		class Wbcr_FactoryClearfy000_Compatibility extends Wbcr_Factory000_Compatibility {
+		class Wbcr_FactoryClearfy_Compatibility extends Wbcr_Factory_Compatibility {
 
 			protected $factory_version;
 
