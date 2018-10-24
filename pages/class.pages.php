@@ -256,16 +256,27 @@
 			public function showBusinessSuggetionWidget()
 			{
 				$upgrade_price = WbcrFactoryClearfy000_Helpers::getClearfyBusinessPrice();
+
+				$features = array(
+					'4_premium' => __('4 premium components now;', 'wbcr_factory_clearfy_000'),
+					'40_premium' => __('40 new premium components within a year for the single price;', 'wbcr_factory_clearfy_000'),
+					'multisite_support' => __('Multisite support;', 'wbcr_factory_clearfy_000'),
+					'advance_settings' => __('Advanced settings;', 'wbcr_factory_clearfy_000'),
+					'no_ads' => __('No ads;', 'wbcr_factory_clearfy_000'),
+					'perfect_support' => __('Perfect support.', 'wbcr_factory_clearfy_000')
+				);
+
+				$features = apply_filters('wbcr/clearfy/page_bussines_suggetion_features', $features);
+
 				?>
 				<div class="wbcr-factory-sidebar-widget wbcr-factory-clearfy-000-pro-suggettion">
 					<h3><?php _e('MORE IN CLEARFY <span>BUSINESS</span>', 'wbcr_factory_clearfy_000')?></h3>
 					<ul>
-						<li><?php _e('4 premium components now;', 'wbcr_factory_clearfy_000')?></li>
-						<li><?php _e('40 new premium components within a year for the single price;', 'wbcr_factory_clearfy_000')?></li>
-						<li><?php _e('Multisite support;', 'wbcr_factory_clearfy_000')?></li>
-						<li><?php _e('Advanced settings;', 'wbcr_factory_clearfy_000')?></li>
-						<li><?php _e('No ads;', 'wbcr_factory_clearfy_000')?></li>
-						<li><?php _e('Perfect support.', 'wbcr_factory_clearfy_000')?></li>
+						<?php if( !empty($features) ): ?>
+							<?php foreach($features as $feature): ?>
+								<li><?= $feature ?></li>
+							<?php endforeach; ?>
+						<?php endif; ?>
 					</ul>
 					<a href="<?= WbcrFactoryClearfy000_Helpers::getWebcrafticSitePageUrl($this->plugin->getPluginName(), 'pricing', 'right_sidebar_ads') ?>" class="wbcr-factory-purchase-premium" target="_blank" rel="noopener">
 						<?php printf(__('Upgrade for $%s', 'wbcr_factory_clearfy_000'), $upgrade_price) ?>
@@ -273,7 +284,6 @@
 				</div>
 			<?php
 			}
-
 
 			public function showInfoWidget()
 			{
