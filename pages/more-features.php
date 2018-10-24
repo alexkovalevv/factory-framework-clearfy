@@ -37,7 +37,7 @@
 
 			public function getPageTitle()
 			{
-				return __('install the ultimate version of the plugin for free!', 'wbcr_factory_clearfy_000');
+				return __('More features', 'wbcr_factory_clearfy_000');
 			}
 
 			public function showPageContent()
