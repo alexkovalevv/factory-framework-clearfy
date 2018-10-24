@@ -45,7 +45,7 @@
 			 *
 			 * @var string
 			 */
-			protected $required_clearfy_version = '1.3.200';
+			protected $required_clearfy_version = '1.4.2';
 
 			/**
 			 * Нужно ли требовать активацию Clearfy для работы этого плагина
