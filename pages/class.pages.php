@@ -266,7 +266,10 @@
 					'perfect_support' => __('Perfect support.', 'wbcr_factory_clearfy_000')
 				);
 
-				$features = apply_filters('wbcr/clearfy/page_bussines_suggetion_features', $features);
+				/**
+				 * @since 2.0.6
+				 */
+				$features = apply_filters('wbcr/clearfy/page_bussines_suggetion_features', $features, $this->plugin->getPluginName(), $this->id);
 
 				?>
 				<div class="wbcr-factory-sidebar-widget wbcr-factory-clearfy-000-pro-suggettion">
