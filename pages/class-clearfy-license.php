@@ -89,14 +89,13 @@ class Wbcr_FactoryClearfy000_LicensePage extends Wbcr_FactoryClearfy000_PageBase
 		if ( ! $this->id ) {
 			$this->id = $this->plugin->getPrefix() . 'license';
 		}
-		$this->premium                  = WIO_Plugin::app()->premium;
+		$this->premium                  = WRIO_Plugin::app()->premium;
 		$this->is_premium               = $this->premium->is_activate();
 		$this->is_premium_active        = $this->premium->is_active();
 		$this->premium_has_subscription = $this->premium->has_paid_subscription();
 		$this->premium_license          = $this->premium->get_license();
 		
 		add_action( 'wp_ajax_wbcr-clearfy-check-license', array( $this, 'ajax_handler' ) );
-		
 		//$this->plugin->premium->activate('sk_UO86V=NqM*!^t$-{*{F]q2sFUEfjp');
 	}
 	
@@ -305,9 +304,8 @@ class Wbcr_FactoryClearfy000_LicensePage extends Wbcr_FactoryClearfy000_PageBase
                                     </td>
 								<?php endif; ?>
                                 <td class="license-param license-param-version">
-										<span class="license-value"><?= $this->plugin->getPluginVersion() ?>
-                                            <small><?php _e( 'version', 'wbcr_factory_clearfy_000' ) ?></small></span>
-                                    <span class="license-value-name"><span><?php _e( 'up-to-date', 'wbcr_factory_clearfy_000' ) ?></span></span>
+                                    <span class="license-value"><?= $this->plugin->getPluginVersion() ?></span>
+                                    <span class="license-value-name"><span>version</span></span>
                                 </td>
 								<?php if ( $this->is_premium ): ?>
                                     <td class="license-param license-param-days">
