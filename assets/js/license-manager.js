@@ -10,87 +10,87 @@
  */
 
 
-jQuery(function ($) {
+jQuery(function($) {
 
-    var allNotices = [];
+	var allNotices = [];
 
-    $(document).on('click', '.wcl-control-btn', function () {
+	$(document).on('click', '.wcl-control-btn', function() {
 
-        // Скрываем все открытые этим событием уведомления
-        // Глобальные уведомления не трогаем
+		// Скрываем все открытые этим событием уведомления
+		// Глобальные уведомления не трогаем
 
-        for (i = 0; i < allNotices.length; i++) {
-            $.wbcr_factory_clearfy_000.app.hideNotice(allNotices[i]);
-        }
+		for( i = 0; i < allNotices.length; i++ ) {
+			$.wbcr_factory_clearfy_000.app.hideNotice(allNotices[i]);
+		}
 
-        $('.wcl-control-btn').hide();
+		$('.wcl-control-btn').hide();
 
-        var wrapper = $('#wcl-license-wrapper'),
-            loader = wrapper.data('loader'),
-            pluginClass = wrapper.data('plugin');
+		var wrapper = $('#wcl-license-wrapper'),
+			loader = wrapper.data('loader'),
+			pluginClass = wrapper.data('plugin');
 
-        $(this).after('<img class="wcl-loader" src="' + loader + '">');
+		$(this).after('<img class="wcl-loader" src="' + loader + '">');
 
-        var data = {
-            action: 'wbcr-clearfy-check-license',
-            _wpnonce: $('#_wpnonce').val(),
-            license_action: $(this).data('action'),
-            licensekey: ''
-        };
+		var data = {
+			action: 'wbcr-clearfy-activate-license',
+			_wpnonce: $('#_wpnonce').val(),
+			license_action: $(this).data('action'),
+			licensekey: ''
+		};
 
-        if ($(this).data('action').trim() === 'activate') {
-            data.licensekey = $('#license-key').val().trim();
-            data.plugin_class = pluginClass;
-        }
+		if( $(this).data('action').trim() === 'activate' ) {
+			data.licensekey = $('#license-key').val().trim();
+			data.plugin_class = pluginClass;
+		}
 
-        $.ajax(ajaxurl, {
-            type: 'post',
-            dataType: 'json',
-            data: data,
-            success: function (response) {
-                var noticeId;
+		$.ajax(ajaxurl, {
+			type: 'post',
+			dataType: 'json',
+			data: data,
+			success: function(response) {
+				var noticeId;
 
-                if (!response || !response.success) {
+				if( !response || !response.success ) {
 
-                    $('.wcl-control-btn').show();
-                    $('.wcl-loader').remove();
+					$('.wcl-control-btn').show();
+					$('.wcl-loader').remove();
 
-                    if (response.data) {
-                        console.log(response.data.error_message);
-                        noticeId = $.wbcr_factory_clearfy_000.app.showNotice('Error: [' + response.data.error_message + ']', 'danger');
-                        allNotices.push(noticeId);
-                    } else {
-                        console.log(response);
-                    }
+					if( response.data ) {
+						console.log(response.data.error_message);
+						noticeId = $.wbcr_factory_clearfy_000.app.showNotice('Error: [' + response.data.error_message + ']', 'danger');
+						allNotices.push(noticeId);
+					} else {
+						console.log(response);
+					}
 
-                    return;
-                }
+					return;
+				}
 
-                if (response.data && response.data.message) {
-                    noticeId = $.wbcr_factory_clearfy_000.app.showNotice(response.data.message, 'success');
-                    allNotices.push(noticeId);
+				if( response.data && response.data.message ) {
+					noticeId = $.wbcr_factory_clearfy_000.app.showNotice(response.data.message, 'success');
+					allNotices.push(noticeId);
 
-                    // todo: доработать генерацию формы, вместо перезагрузки страницы
-                    window.location.reload();
-                }
+					// todo: доработать генерацию формы, вместо перезагрузки страницы
+					window.location.reload();
+				}
 
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
+			},
+			error: function(xhr, ajaxOptions, thrownError) {
 
-                $('.wcl-control-btn').show();
-                $('.wcl-loader').remove();
+				$('.wcl-control-btn').show();
+				$('.wcl-loader').remove();
 
-                console.log(xhr.status);
-                console.log(xhr.responseText);
-                console.log(thrownError);
+				console.log(xhr.status);
+				console.log(xhr.responseText);
+				console.log(thrownError);
 
-                var noticeId = $.wbcr_factory_clearfy_000.app.showNotice('Error: [' + thrownError + '] Status: [' + xhr.status + '] Error massage: [' + xhr.responseText + ']', 'danger');
+				var noticeId = $.wbcr_factory_clearfy_000.app.showNotice('Error: [' + thrownError + '] Status: [' + xhr.status + '] Error massage: [' + xhr.responseText + ']', 'danger');
 
-                allNotices.push(noticeId);
-            }
-        });
+				allNotices.push(noticeId);
+			}
+		});
 
-        return false;
-    });
+		return false;
+	});
 
 });

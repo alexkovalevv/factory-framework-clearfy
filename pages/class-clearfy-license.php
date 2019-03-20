@@ -95,8 +95,7 @@ class Wbcr_FactoryClearfy000_LicensePage extends Wbcr_FactoryClearfy000_PageBase
 		$this->premium_has_subscription = $this->premium->has_paid_subscription();
 		$this->premium_license          = $this->premium->get_license();
 		
-		add_action( 'wp_ajax_wbcr-clearfy-check-license', array( $this, 'ajax_handler' ) );
-		//$this->plugin->premium->activate('sk_UO86V=NqM*!^t$-{*{F]q2sFUEfjp');
+		add_action( 'wp_ajax_wbcr-clearfy-activate-license', array( $this, 'ajax_handler' ) );
 	}
 	
 	/**
