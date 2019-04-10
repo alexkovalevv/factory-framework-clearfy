@@ -14,9 +14,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Обработчик ajax запросов для проверки, активации, деактивации лицензионного ключа
  *
+ * @param Wbcr_Factory000_Plugin $plugin_instance
+ *
  * @since 2.0.7
  *
- * @param Wbcr_Factory000_Plugin $plugin_instance
  */
 function wbcr_factory_clearfy_000_check_license( $plugin_instance ) {
 	check_admin_referer( 'license' );
