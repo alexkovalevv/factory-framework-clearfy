@@ -180,11 +180,11 @@
 			 */
 			public function checkClearfyFrameworkCompatibility()
 			{
-				if( !defined('WBCR_CLEARFY_FRAMEWORK_VER') || empty($this->factory_version) ) {
+				if( !defined('WCL_FRAMEWORK_VER') || empty($this->factory_version) ) {
 					return false;
 				}
 
-				return WBCR_CLEARFY_FRAMEWORK_VER == $this->factory_version;
+				return WCL_FRAMEWORK_VER == $this->factory_version;
 			}
 
 			/**
