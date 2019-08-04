@@ -4,9 +4,9 @@
  * Общий класс прослойка для страниц Clearfy и его компоннетов.
  * В этом классе добавляются общие ресурсы и элементы, необходимые для всех связанных плагинов.
  *
- * Author: Alexander Kovalev <alex.kovalevv@gmail.com>
+ * @author        Alex Kovalev <alex.kovalevv@gmail.com>, repo: https://github.com/alexkovalevv
  *
- * @since 2.0.5
+ * @since         2.0.5
  */
 
 // Exit if accessed directly

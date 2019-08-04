@@ -2,7 +2,7 @@
 /**
  * Factory clearfy
  *
- * @author        Alex Kovalev <alex.kovalevv@gmail.com>
+ * @author        @author        Alex Kovalev <alex.kovalevv@gmail.com>, repo: https://github.com/alexkovalevv
  * @since         1.0.0
  * @package       clearfy
  * @copyright (c) 2018, Webcraftic Ltd
@@ -20,7 +20,7 @@ if ( defined( 'FACTORY_CLEARFY_000_LOADED' ) ) {
 
 define( 'FACTORY_CLEARFY_000_LOADED', true );
 
-define( 'FACTORY_CLEARFY_000', '2.0.6' );
+define( 'FACTORY_CLEARFY_000', '2.0.8' );
 
 define( 'FACTORY_CLEARFY_000_DIR', dirname( __FILE__ ) );
 define( 'FACTORY_CLEARFY_000_URL', plugins_url( null, __FILE__ ) );
