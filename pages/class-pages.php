@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Class Wbcr_FactoryPages000_ImpressiveThemplate
  *
- * @method string getInfoWidget() - get widget content information *
+ * @method string getInfoWidget() - get widget content information
  * @method string getRatingWidget( array $args = [] ) - get widget content rating
  * @method string getDonateWidget() - get widget content donate
  * @method string getBusinessSuggetionWidget()
@@ -258,9 +258,11 @@ class Wbcr_FactoryClearfy000_PageBase extends Wbcr_FactoryPages000_ImpressiveThe
 	 * @since  2.0.2
 	 */
 	public function showBusinessSuggetionWidget() {
-		$upgrade_price = WbcrFactoryClearfy000_Helpers::getClearfyBusinessPrice();
+		$plugin_name   = $this->plugin->getPluginName();
+		$upgrade_price = $this->plugin->has_premium() ? $this->plugin->premium->get_price() : 0;
+		$purchase_url  = $this->plugin->get_support()->get_pricing_url( true, 'right_sidebar_ads' );
 
-		$features = [
+		$default_features = [
 			'4_premium'         => __( '4 premium components now;', 'wbcr_factory_clearfy_000' ),
 			'40_premium'        => __( '40 new premium components within a year for the single price;', 'wbcr_factory_clearfy_000' ),
 			'multisite_support' => __( 'Multisite support;', 'wbcr_factory_clearfy_000' ),
@@ -270,21 +272,40 @@ class Wbcr_FactoryClearfy000_PageBase extends Wbcr_FactoryPages000_ImpressiveThe
 		];
 
 		/**
+		 * @since 2.0.8 - added
+		 */
+		$suggetion_title = __( 'MORE IN CLEARFY <span>BUSINESS</span>', 'wbcr_factory_clearfy_000' );
+		$suggetion_title = apply_filters( 'wbcr/clearfy/pages/suggetion_title', $suggetion_title, $plugin_name, $this->id );
+
+		/**
+		 * @since 2.0.8 - deprecated
+		 */
+		$suggetion_features = wbcr_factory_000_apply_filters_deprecated( 'wbcr/clearfy/page_bussines_suggetion_features', [
+			$default_features,
+			$this->plugin->getPluginName(),
+			$this->id
+		], '2.0.8', 'wbcr/clearfy/pages/suggetion_features' );
+
+		/**
+		 * @since 2.0.8 - renamed
 		 * @since 2.0.6
 		 */
-		$features = apply_filters( 'wbcr/clearfy/page_bussines_suggetion_features', $features, $this->plugin->getPluginName(), $this->id );
+		$suggetion_features = apply_filters( 'wbcr/clearfy/pages/suggetion_features', $suggetion_features, $plugin_name, $this->id );
 
+		if ( empty( $suggetion_features ) ) {
+			$suggetion_features = $default_features;
+		}
 		?>
         <div class="wbcr-factory-sidebar-widget wbcr-factory-clearfy-000-pro-suggettion">
-            <h3><?php _e( 'MORE IN CLEARFY <span>BUSINESS</span>', 'wbcr_factory_clearfy_000' ) ?></h3>
+            <h3><?php echo $suggetion_title; ?></h3>
             <ul>
-				<?php if ( ! empty( $features ) ): ?>
-					<?php foreach ( $features as $feature ): ?>
+				<?php if ( ! empty( $suggetion_features ) ): ?>
+					<?php foreach ( $suggetion_features as $feature ): ?>
                         <li><?= $feature ?></li>
 					<?php endforeach; ?>
 				<?php endif; ?>
             </ul>
-            <a href="<?= WbcrFactoryClearfy000_Helpers::getWebcrafticSitePageUrl( $this->plugin->getPluginName(), 'pricing', 'right_sidebar_ads' ) ?>" class="wbcr-factory-purchase-premium" target="_blank" rel="noopener">
+            <a href="<?php echo $purchase_url ?>" class="wbcr-factory-purchase-premium" target="_blank" rel="noopener">
 				<?php printf( __( 'Upgrade for $%s', 'wbcr_factory_clearfy_000' ), $upgrade_price ) ?>
             </a>
         </div>
