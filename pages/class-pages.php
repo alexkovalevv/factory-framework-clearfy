@@ -4,8 +4,7 @@
  * Общий класс прослойка для страниц Clearfy и его компоннетов.
  * В этом классе добавляются общие ресурсы и элементы, необходимые для всех связанных плагинов.
  *
- * @author        Alex Kovalev <alex.kovalevv@gmail.com>, repo: https://github.com/alexkovalevv
- *
+ * @author        Alex Kovalev <alex.kovalevv@gmail.com>, Github: https://github.com/alexkovalevv
  * @since         2.0.5
  */
 
@@ -17,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Class Wbcr_FactoryPages000_ImpressiveThemplate
  *
- * @method string getInfoWidget() - get widget content information
+ * @method string getInfoWidget() - get widget content information *
  * @method string getRatingWidget( array $args = [] ) - get widget content rating
  * @method string getDonateWidget() - get widget content donate
  * @method string getBusinessSuggetionWidget()

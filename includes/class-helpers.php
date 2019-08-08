@@ -1,20 +1,19 @@
 <?php
-
-/**
- * Helpers functions
- *
- * @author        Alex Kovalev <alex.kovalevv@gmail.com>, repo: https://github.com/alexkovalevv
- * @since         1.0.0
- * @package       clearfy
- * @copyright (c) 2018, Webcraftic Ltd
- *
- */
-
 // Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+
+/**
+ * Helpers functions
+ *
+ * @author        Alex Kovalev <alex.kovalevv@gmail.com>, Github: https://github.com/alexkovalevv
+ * @since         1.0.0
+ * @package       clearfy
+ * @copyright (c) 2018, Webcraftic Ltd
+ *
+ */
 class WbcrFactoryClearfy000_Helpers {
 
 	/**

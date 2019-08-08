@@ -2,7 +2,7 @@
 /**
  * The page Settings.
  *
- * @author        @author        Alex Kovalev <alex.kovalevv@gmail.com>, repo: https://github.com/alexkovalevv
+ * @author        Alex Kovalev <alex.kovalevv@gmail.com>, Github: https://github.com/alexkovalevv
  * @since         1.0.1
  * @package       clearfy
  * @copyright (c) 2018, Webcraftic Ltd
@@ -14,42 +14,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class Wbcr_FactoryClearfy000_MoreFeaturesPage extends Wbcr_FactoryClearfy000_PageBase {
 
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @var string
-	 */
+class Wbcr_FactoryClearfy000_MoreFeaturesPage extends Wbcr_FactoryPages000_ImpressiveThemplate {
+
 	public $id = "more_features";
 
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @var string
-	 */
 	public $page_menu_dashicon = 'dashicons-star-filled wbcr-factory-orange-color';
 
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @var int
-	 */
 	public $page_menu_position = 5;
 
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @since   2.0.5 - добавлен
-	 * @var bool
-	 */
-	public $show_right_sidebar_in_options = false;
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @var string
-	 */
 	public $type = 'page';
 
 	public function __construct( Wbcr_Factory000_Plugin $plugin ) {

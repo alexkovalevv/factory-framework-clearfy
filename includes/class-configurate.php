@@ -1,20 +1,18 @@
 <?php
-/**
- * Configurate clearfy plugins
- *
- * @author        Alex Kovalev <alex.kovalevv@gmail.com>, repo: https://github.com/alexkovalevv
- * @since         1.0.0
- * @package       clearfy
- * @copyright (c) 2018, Webcraftic Ltd
- *
- */
-
 // Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-
+/**
+ * Configurate clearfy plugins
+ *
+ * @author        Alex Kovalev <alex.kovalevv@gmail.com>, Github: https://github.com/alexkovalevv
+ * @since         1.0.0
+ * @package       clearfy
+ * @copyright (c) 2018, Webcraftic Ltd
+ *
+ */
 abstract class Wbcr_FactoryClearfy000_Configurate {
 
 	/**
@@ -116,4 +114,3 @@ abstract class Wbcr_FactoryClearfy000_Configurate {
 		$this->plugin->deleteOption( $option_name );
 	}
 }
-
