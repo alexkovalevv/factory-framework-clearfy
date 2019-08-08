@@ -27,6 +27,7 @@ define( 'FACTORY_CLEARFY_000_URL', plugins_url( null, __FILE__ ) );
 
 load_plugin_textdomain( 'wbcr_factory_clearfy_000', false, dirname( plugin_basename( __FILE__ ) ) . '/langs' );
 
+require( FACTORY_CLEARFY_000_DIR . '/includes/ajax-handlers.php' );
 require( FACTORY_CLEARFY_000_DIR . '/includes/class-helpers.php' );
 require( FACTORY_CLEARFY_000_DIR . '/includes/class-configurate.php' );
 
