@@ -20,7 +20,7 @@ if ( defined( 'FACTORY_CLEARFY_000_LOADED' ) ) {
 
 define( 'FACTORY_CLEARFY_000_LOADED', true );
 
-define( 'FACTORY_CLEARFY_000', '2.1.0' );
+define( 'FACTORY_CLEARFY_000', '2.1.1' );
 
 define( 'FACTORY_CLEARFY_000_DIR', dirname( __FILE__ ) );
 define( 'FACTORY_CLEARFY_000_URL', plugins_url( null, __FILE__ ) );
