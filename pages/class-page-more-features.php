@@ -17,13 +17,41 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class Wbcr_FactoryClearfy000_MoreFeaturesPage extends Wbcr_FactoryPages000_ImpressiveThemplate {
 
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @var string
+	 */
 	public $id = "more_features";
 
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @var string
+	 */
 	public $page_menu_dashicon = 'dashicons-star-filled wbcr-factory-orange-color';
 
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @var string
+	 */
 	public $page_menu_position = 5;
 
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @var string
+	 */
 	public $type = 'page';
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @since  2.0.6 - добавлен
+	 * @var bool
+	 */
+	public $internal = true;
 
 	public function __construct( Wbcr_Factory000_Plugin $plugin ) {
 		$this->menu_title = __( 'More features (<b>free</b>)', 'wbcr_factory_clearfy_000' );
@@ -33,10 +61,20 @@ class Wbcr_FactoryClearfy000_MoreFeaturesPage extends Wbcr_FactoryPages000_Impre
 		$this->plugin = $plugin;
 	}
 
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @return string
+	 */
 	public function getPageTitle() {
 		return __( 'More features', 'wbcr_factory_clearfy_000' );
 	}
 
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @return void
+	 */
 	public function showPageContent() {
 		?>
         <div class="row">
