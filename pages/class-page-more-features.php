@@ -48,6 +48,13 @@ class Wbcr_FactoryClearfy000_MoreFeaturesPage extends Wbcr_FactoryPages000_Impre
 	/**
 	 * {@inheritDoc}
 	 *
+	 * @var bool
+	 */
+	public $available_for_multisite = true;
+
+	/**
+	 * {@inheritDoc}
+	 *
 	 * @since  2.0.6 - добавлен
 	 * @var bool
 	 */
