@@ -227,7 +227,7 @@ class Wbcr_FactoryClearfy000_PageBase extends Wbcr_FactoryPages000_ImpressiveThe
 			$widgets['support_widget'] = $this->getSupportWidget();
 			//$widgets['donate_widget'] = $this->getDonateWidget();
 		} else if ( $position == 'right' ) {
-			$widgets['businnes_suggetion'] = $this->getBusinessSuggetionWidget();
+			$widgets['business_suggetion'] = $this->getBusinessSuggetionWidget();
 			$widgets['info_widget']        = $this->getInfoWidget();
 			$widgets['rating_widget']      = $this->getRatingWidget();
 		}
