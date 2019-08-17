@@ -15,26 +15,46 @@ class Wbcr_FactoryClearfy000_LicensePage extends Wbcr_FactoryClearfy000_PageBase
 
 	/**
 	 * {@inheritdoc}
+	 *
+	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
+	 * @since  2.1.2
+	 * @var string
 	 */
 	public $type = "page";
 
 	/**
 	 * {@inheritdoc}
+	 *
+	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
+	 * @since  2.1.2
+	 * @var string
 	 */
 	public $page_menu_dashicon = 'dashicons-admin-network';
 
 	/**
 	 * {@inheritdoc}
+	 *
+	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
+	 * @since  2.1.2
+	 * @var bool
 	 */
 	public $show_right_sidebar_in_options = false;
 
 	/**
 	 * {@inheritdoc}
+	 *
+	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
+	 * @since  2.1.2
+	 * @var int
 	 */
 	public $page_menu_position = 0;
 
 	/**
 	 * {@inheritdoc}
+	 *
+	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
+	 * @since  2.1.2
+	 * @var bool
 	 */
 	public $available_for_multisite = true;
 
@@ -90,7 +110,7 @@ class Wbcr_FactoryClearfy000_LicensePage extends Wbcr_FactoryClearfy000_PageBase
 		if ( ! $this->id ) {
 			$this->id = $this->plugin->getPrefix() . 'license';
 		}
-		$this->premium                  = WRIO_Plugin::app()->premium;
+		$this->premium                  = $plugin->premium;
 		$this->is_premium               = $this->premium->is_activate();
 		$this->is_premium_active        = $this->premium->is_active();
 		$this->premium_has_subscription = $this->premium->has_paid_subscription();
